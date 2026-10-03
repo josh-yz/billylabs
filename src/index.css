@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #f5f1e8;
+  }
+
+  .paper-texture {
+    background-color: #f5f1e8;
+    background-image:
+      radial-gradient(rgba(18, 63, 131, 0.055) 0.7px, transparent 0.7px),
+      radial-gradient(rgba(18, 63, 131, 0.035) 0.6px, transparent 0.6px),
+      linear-gradient(115deg, rgba(255, 255, 255, 0.22), rgba(225, 216, 198, 0.12));
+    background-position: 0 0, 9px 11px, 0 0;
+    background-size: 17px 17px, 23px 23px, 100% 100%;
+  }
+
+  ::selection {
+    background-color: rgba(37, 99, 235, 0.3);
+    color: white;
+  }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
